@@ -1,0 +1,24 @@
+<h2>Is It The Weekend? Get a Daily Text to Find Out!</h2>
+<p>
+This is a free service that will analyze <a href="http://isittheweekend.com">isittheweekend.com</a> and 
+check for any updates once a day. If there is an update it will send you a text message at the number 
+you provide. 
+</p>
+<p>
+To remove yourself from the SMS list, reply to the text message you receive with the number "1".
+</p>
+<p>
+SMS messages are sent using the <a href="https://developer.nexmo.com">Nexmo SMS API</a>.
+</p>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_with model: @recipient, url: "/recipient/new" do |f| %>
+  <%= f.telephone_field :number, :placeholder => '12122222222' %>
+  <%= f.hidden_field :subscribed, value: true %>
+  <%= f.submit "Add Number" %>
+<% end %>

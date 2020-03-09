@@ -1,0 +1,21 @@
+{
+  "name": "Is It The Weekend Yet?",
+  "description": "Check once a day if it is the weekend and send an SMS update to all subscribed",
+  "repository": "https://github.com/nexmo-community/ruby-sms-weekend-checker",
+  "keywords": ["ruby", "rails", "sms"],
+  "buildpacks": [{"url": "heroku/ruby"}],
+  "env": {
+    "NEXMO_API_KEY": {
+      "description": "Your Nexmo API key"
+    },
+    "NEXMO_API_SECRET": {
+      "description": "Your Nexmo API secret"
+    },
+    "FROM_NUMBER": {
+      "description": "Your Nexmo provisioned virtual phone number"
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
