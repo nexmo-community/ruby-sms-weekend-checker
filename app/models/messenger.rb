@@ -1,7 +1,7 @@
 class Messenger < ApplicationRecord
-  @client = Nexmo::Client.new(
-    api_key: ENV['NEXMO_API_KEY'],
-    api_secret: ENV['NEXMO_API_SECRET']
+  @client = Vonage::Client.new(
+    api_key: ENV['VONAGE_API_KEY'],
+    api_secret: ENV['VONAGE_API_SECRET']
   )
 
   def self.send_update_message(recipients, yesterday, today)
