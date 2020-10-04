@@ -27,7 +27,7 @@ gem 'watir'
 gem 'webdrivers', '~> 4.0'
 gem 'whenever', require: false
 gem 'dotenv-rails'
-
+gem 'httparty'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
