@@ -1,6 +1,6 @@
 class DiffStorage < ApplicationRecord
   def self.url
-    'http://isittheweekend.com'
+    'https://isittheweekend.com/'
   end
 
   def self.check_last_record

@@ -2,13 +2,13 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-community/ruby-sms-weekend-checker/)
 
-This is a Ruby on Rails web app that scrapes once a day [isittheweekend.com](https://isittheweekend.com) to find out if today is the weekend and sends an update to all subscribers via SMS using the Nexmo SMS API.
+This is a Ruby on Rails web app that scrapes once a day [isittheweekend.com](https://isittheweekend.com) to find out if today is the weekend and sends an update to all subscribers via SMS using the Vonage SMS API.
 
 ## Prerequisites
 
 * Ruby on Rails
-* A Nexmo account
-* A Nexmo phone number
+* A Vonage account
+* A Vonage phone number
 
 ## Installation
 
@@ -23,15 +23,15 @@ To install this application:
 
 To use this application:
 
-* Set up a [Nexmo account](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=ruby-sms-weekend-checker)
-* Purchase a Nexmo phone number
+* Set up a [Vonage account](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=ruby-sms-weekend-checker)
+* Purchase a Vonage phone number
 * Start your [ngrok server](https://ngrok.io) from the command line
-* Update your number's webhook address in the [Nexmo Dashboard](https://dashboard.nexmo.com) to your ngrok URL
+* Update your number's webhook address in the [Vonage Dashboard](https://dashboard.nexmo.com) to your ngrok URL
   * i.e. `https://my-ngrok-url.ngrok.io/webhooks/event`
 * Copy the `.env.sample` file to `.env` and fill in the values for the variables
-  * `NEXMO_API_KEY`: Your Nexmo API key
-  * `NEXMO_API_SECRET`: Your Nexmo API secret 
-  * `FROM_NUMBER`: Your Nexmo provisioned phone number
+  * `VONAGE_API_KEY`: Your Vonage API key
+  * `VONAGE_API_SECRET`: Your Vonage API secret 
+  * `FROM_NUMBER`: Your Vonage provisioned phone number
 * Run `whenever --update-crontab` from the command line to set up the daily scraping task 
 * Start your Rails server
 * Visit `localhost:3000` in your browser and add your phone number on the form
