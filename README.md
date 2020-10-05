@@ -1,6 +1,6 @@
 # Check If It Is The Weekend Web Scraping App
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-community/ruby-sms-weekend-checker/)
 
 This is a Ruby on Rails web app that scrapes once a day [isittheweekend.com](https://isittheweekend.com) to find out if today is the weekend and sends an update to all subscribers via SMS using the Nexmo SMS API.
 
